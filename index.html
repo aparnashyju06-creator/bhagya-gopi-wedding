@@ -24,6 +24,7 @@ section{padding:105px 0}.story,.details{background:var(--panel)}.section-head{te
 <script>const weddingDate=new Date('2026-11-01T11:40:00+05:30').getTime();function updateCountdown(){const diff=weddingDate-Date.now(),ids=['days','hours','minutes','seconds'];if(diff<=0){ids.forEach(id=>document.getElementById(id).textContent='00');return}const v={days:Math.floor(diff/86400000),hours:Math.floor(diff%86400000/3600000),minutes:Math.floor(diff%3600000/60000),seconds:Math.floor(diff%60000/1000)};Object.entries(v).forEach(([id,n])=>document.getElementById(id).textContent=String(n).padStart(2,'0'))}updateCountdown();setInterval(updateCountdown,1000);const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));</script>
 
 
+
 <!-- Bhagya & Gopi Reception Details -->
 <section id="reception" class="details">
   <div class="section-head reveal">
